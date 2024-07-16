@@ -58,9 +58,33 @@ function getHumanChoice() {
 // Increments the winner's score and logs a winner announcement
 function playRound(humanChoice, computerChoice) {
     
+    // If choices are the same, declare tie
+    if (humanChoice == computerChoice) {
+        console.log("TIE");
+    }
+    // Check for losing human outcomes
+    // Paper vs. Scissors
+    if (humanChoice == "paper" && computerChoice == "scissors") {
+        console.log("COMPUTER WINS");
+    }
+    // Scissors vs. Rock
+    if (humanChoice == "scissors" && computerChoice == "rock") {
+        console.log("COMPUTER WINS");
+    }
+    // Rock vs. Paper
+    if (humanChioce == "rock" && computerChoice == "paper") {
+        console.log("COMPUTER WINS");
+    }
+    
+
+
+    // If human didn't lose, and it wasn't a tie then they won
+
+
 
 }
 
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
-// getHumanChoice();
-// console.log(getComputerChoice());
+playRound(humanSelection, computerSelection);
