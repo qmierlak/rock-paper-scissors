@@ -43,7 +43,7 @@ function getHumanChoice() {
     console.log("You chose: " + choice);
 
     // Check that their selection is valid
-     if (choice != ("rock" || "paper" || "scissors")) {
+    if (!(choice == "rock" || choice == "paper" || choice == "scissors")) {
         console.log("Sorry, you didn't input rock, paper, or scissors");
         return;
     }
@@ -58,9 +58,14 @@ function getHumanChoice() {
 // Increments the winner's score and logs a winner announcement
 function playRound(humanChoice, computerChoice) {
     
+    // Print computer's choice and human's choice
+    console.log("Player chose: " + humanChoice);
+    console.log("Computer chose: " + computerChoice);
+
     // If choices are the same, declare tie
     if (humanChoice == computerChoice) {
         console.log("TIE");
+        return;
     }
     // Check for losing human outcomes
     // Paper vs. Scissors
@@ -68,18 +73,18 @@ function playRound(humanChoice, computerChoice) {
         console.log("COMPUTER WINS");
     }
     // Scissors vs. Rock
-    if (humanChoice == "scissors" && computerChoice == "rock") {
+    else if (humanChoice == "scissors" && computerChoice == "rock") {
         console.log("COMPUTER WINS");
     }
     // Rock vs. Paper
-    if (humanChioce == "rock" && computerChoice == "paper") {
+    else if (humanChoice == "rock" && computerChoice == "paper") {
         console.log("COMPUTER WINS");
     }
     
-
-
     // If human didn't lose, and it wasn't a tie then they won
-
+    else {
+        console.log("HUMAN WINS");
+    }
 
 
 }
