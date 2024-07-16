@@ -106,14 +106,14 @@ function playGame() {
     let numRounds = 0;
     // Plays 5 rounds of the game
     while(numRounds < 5) {
-
+        console.log("ROUND: " +  (numRounds+1));
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
 
         playRound(humanSelection, computerSelection);
 
-        console.log(" Round: " + numRounds + ". The current is: " + humanScore + " for the player, and " + computerScore + " for the computer.");
-        console.log("Entering round: " + (numRounds+1));
+        console.log("The current score is: " + humanScore + " for the player, and " + computerScore + " for the computer.");
+
         // Increase the round count by 1
         numRounds++;
     }
