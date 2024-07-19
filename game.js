@@ -112,8 +112,16 @@ buttons.forEach((button) => {
         computerScore + " (computer).";
         body.appendChild(divItem);
         roundNumber++;
+
+        if(humanScore == 5 || computerScore == 5) {
+            let winnerAnnouncement = document.createElement('div');
+            winnerAnnouncement.textContent = (humanScore > computerScore) ? "PLAYER WINS" : "COMPUTER WINS";
+            body.appendChild(winnerAnnouncement);
+        }
+        
     });
 })
+
 
 
 // Triggers 5 rounds of the game
