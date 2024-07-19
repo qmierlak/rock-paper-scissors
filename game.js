@@ -1,6 +1,6 @@
 let humanScore = 0;
-let compuerScore = 0;
-
+let computerScore = 0;
+let roundNumber = 0;
 
 // Randomly returns "rock", "paper", or "scissors"
 function getComputerChoice() {
@@ -99,7 +99,16 @@ const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
     button.addEventListener("click", function(e) {
         console.log(button.id);
-        playRound(button.id, getComputerChoice());
+        let playerChoice = button.id;
+        let computerChoice = getComputerChoice();
+        playRound(playerChoice, computerChoice);
+
+        const body = document.querySelector('body');
+        const divItem = document.createElement('div');
+        divItem.textContent = "Player selected: " + 
+        playerChoice + " and Computer selected: "
+        + computerChoice;
+        body.appendChild(divItem);
     });
 })
 
