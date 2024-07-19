@@ -105,10 +105,13 @@ buttons.forEach((button) => {
 
         const body = document.querySelector('body');
         const divItem = document.createElement('div');
-        divItem.textContent = "Player selected: " + 
-        playerChoice + " and Computer selected: "
-        + computerChoice;
+        divItem.textContent = "Round: " + roundNumber + 
+        ". Player selected: " + playerChoice + 
+        " and Computer selected: " + computerChoice +
+        ". Score is now " + humanScore + " (player) " +
+        computerScore + " (computer).";
         body.appendChild(divItem);
+        roundNumber++;
     });
 })
 
